@@ -1,0 +1,151 @@
+/* Importa la fuente Rammetto One */
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+
+:root {
+  --white-color: #fff;
+  --button-correct: #5aae76;
+  --button-wrong: #e13e3e;
+  --button-hover: #aaa;
+  --pokeball-red: #ff0000;
+  --pokeball-white: #ffffff;
+  --pokeball-black: #000000;
+  --pokeball-gray: #cccccc;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, var(--pokeball-red) 50%, var(--pokeball-white) 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1; /* Ensure main content is above the background elements */
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  margin-right: 50px; /* Para separar del contenedor de opciones */
+}
+
+.header {
+  margin: 0;
+  font-family: "Rammetto One", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  height: 100px;
+}
+
+#pokemonImage {
+  height: 300px; /* Aumenta el tamaño de la imagen */
+  max-width: 100%;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-right: -100px;
+}
+
+button {
+  height: 100px; /* Aumenta el tamaño de los botones */
+  margin: 15px;
+  width: 400px; /* Ancho fijo mayor */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px; /* Aumenta el tamaño de la fuente */
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: var(--pokeball-gray);
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  color: var(--white-color);
+}
+
+button.correct {
+  background-color: var(--button-correct);
+  color: var(--white-color);
+}
+
+button.wrong {
+  background-color: var(--button-wrong);
+  color: var(--white-color);
+}
+
+#loadingContainer {
+  height: 500px;
+}
+
+#points {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#quantity {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#loadingIcon {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 20%;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.pokeball-middle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: var(--pokeball-black);
+  transform: translateY(-50%);
+  z-index: 0; /* Ensure middle band is below the main content */
+}
+
+.pokeball-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--pokeball-gray);
+  border: 10px solid var(--pokeball-black);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* Ensure button is below the main content */
+}

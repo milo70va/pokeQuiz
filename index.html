@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Como se llama este bichito?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="pokeball-middle"></div>
+  <div class="pokeball-button"></div>
+  <div class="main-container show">
+    <div class="left-side">
+      <h4 id="result" class="header">¿Como se llama este bichito?</h4>
+      <img id="pokemonImage" alt="Pokemon Image" />
+      <h4 id="points">
+        Puntos: <span id="pointsValue">0%</span>
+      </h4>
+      <h4 id="quantity">
+        Cantidad: <span id="totalCount">0</span>
+      </h4>
+    </div>
+    <div id="options" class="options-container">
+      <!-- Botones generados dinámicamente -->
+    </div>
+  </div>
+  <div id="loadingContainer" class="loading-container hide">
+    <img id="loadingIcon" src="loading_icon.gif" alt="loading..." />
+  </div>
+</body>
+</html>
